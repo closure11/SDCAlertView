@@ -72,13 +72,6 @@ public class AlertAction: NSObject {
     /// sheets.
     @objc
     public private(set) var imageView = UIImageView()
-    
-    /// Right-aligned accessory view. If set, the title label will be left-aligned instead of centered. If no
-    /// other constraints are set, the view's intrinsic size is used to determine the size of the accessory
-    /// view, preserving its aspect ratio. If the view has no intrinsic size, it's up to the developer to
-    /// define a complete set of constraints. This property only has an effect on action sheets.
-    @objc
-    public var accessoryView: UIView?
 }
 
 @available(iOSApplicationExtension, unavailable)

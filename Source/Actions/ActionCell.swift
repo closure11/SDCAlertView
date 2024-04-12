@@ -24,19 +24,13 @@ final class ActionCell: UICollectionViewCell {
         self.titleLabel.font = visualStyle.font(for: action)
         self.titleLabel.textColor = self.textColor ?? self.tintColor
         self.titleLabel.attributedText = action.attributedTitle
-        self.titleLabel.textAlignment =
-            action.imageView.image != nil || action.accessoryView != nil ? .left : .center
+        self.titleLabel.textAlignment = .center
 
         self.highlightedBackgroundView.backgroundColor = visualStyle.actionHighlightColor
 
         if action.imageView.image != nil {
             self.stackView.insertArrangedSubview(action.imageView, at: 0)
             self.constrainSecondaryView(action.imageView)
-        }
-
-        if let accessoryView = action.accessoryView {
-            self.stackView.addArrangedSubview(accessoryView)
-            self.constrainSecondaryView(accessoryView)
         }
 
         self.setupAccessibility(using: action)
